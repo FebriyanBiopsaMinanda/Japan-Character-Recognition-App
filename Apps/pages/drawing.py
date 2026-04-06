@@ -280,13 +280,6 @@ elif page == "Canvas":
 
         st.markdown("</div>", unsafe_allow_html=True)
 
-        btn_col1, btn_col2, btn_col3, btn_col4 = st.columns(4, gap="medium")
-
-        with btn_col1:
-            if st.button("Reset (リセット)", use_container_width=True):
-                st.session_state.canvas_key += 1
-                st.rerun()
-
     with right_col:
 
         st.markdown(
@@ -311,6 +304,11 @@ elif page == "Canvas":
 
         btn_col1, btn_col2, btn_col3 = st.columns(3, gap="medium")
 
+        with btn_col1:
+            if st.button("Reset (リセット)", use_container_width=True):
+                    st.session_state.canvas_key += 1
+                    st.rerun()
+            
         with btn_col3:
             predict_clicked = st.button("Predict (予測) ", use_container_width=True)
             
