@@ -144,7 +144,7 @@ def show_character_samples(title, data_map, base_dir, key_prefix):
 # HALAMAN KONTEN
 # =========================
 if page == "Dashboard":
-    st.switch_page(".../dashboard.py")
+    st.switch_page("dashboard.py")
 
 elif page == "Data":
     show_character_samples("Hiragana (ひらがな) ", hiragana_map, HIRAGANA_DIR, "hiragana")
