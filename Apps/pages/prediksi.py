@@ -6,6 +6,7 @@ import cv2
 from PIL import Image
 import tensorflow as tf
 import random
+from pathlib import Path
 
 # =========================
 # KONFIGURASI HALAMAN
@@ -20,8 +21,9 @@ st.set_page_config(
 # =========================
 # KONFIGURASI FILE MODEL
 # =========================
-MODEL_PATH = "../japanese_char.h5"
-CLASS_NAMES_PATH = "../class_names.npy"
+PATH_BASE = Path(__file__).resolve().parent.parent.parent
+MODEL_PATH = PATH_BASE / "japanese_char.h5"
+CLASS_NAMES_PATH = PATH_BASE / "class_names.npy"
 IMG_SIZE = 64
 
 # =========================
@@ -146,10 +148,10 @@ def parse_prediction_label(label):
 # =========================
 # AMBIL SAMPEL
 # =========================
-st.write("HIRAGANA_DIR:", HIRAGANA_DIR)
-st.write("KATAKANA_DIR:", KATAKANA_DIR)
-st.write("Hiragana exists:", os.path.exists(HIRAGANA_DIR))
-st.write("Katakana exists:", os.path.exists(KATAKANA_DIR))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+DATASET_DIR = os.path.join(BASE_DIR, "Dataset")
+HIRAGANA_DIR = os.path.join(DATASET_DIR, "Hiragana Images")
+KATAKANA_DIR = os.path.join(DATASET_DIR, "Katakana Images")
 
 def get_sample_images(script_type, romaji, max_samples=5):
     if script_type.lower() == "hiragana":
