@@ -146,8 +146,10 @@ def parse_prediction_label(label):
 # =========================
 # AMBIL SAMPEL
 # =========================
-HIRAGANA_DIR = "../Dataset/Hiragana Images"
-KATAKANA_DIR = "../Dataset/Katakana Images"
+st.write("HIRAGANA_DIR:", HIRAGANA_DIR)
+st.write("KATAKANA_DIR:", KATAKANA_DIR)
+st.write("Hiragana exists:", os.path.exists(HIRAGANA_DIR))
+st.write("Katakana exists:", os.path.exists(KATAKANA_DIR))
 
 def get_sample_images(script_type, romaji, max_samples=5):
     if script_type.lower() == "hiragana":
