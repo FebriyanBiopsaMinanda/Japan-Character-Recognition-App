@@ -72,8 +72,10 @@ katakana_map = {
 # =========================
 # FOLDER DATASET
 # =========================
-HIRAGANA_DIR = "../Dataset/Hiragana Images"
-KATAKANA_DIR = "../Dataset/Katakana Images"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+DATASET_DIR = os.path.join(BASE_DIR, "Dataset")
+HIRAGANA_DIR = os.path.join(DATASET_DIR, "Hiragana Images")
+KATAKANA_DIR = os.path.join(DATASET_DIR, "Katakana Images")
 
 # =========================
 # FUNGSI AMBIL GAMBAR
