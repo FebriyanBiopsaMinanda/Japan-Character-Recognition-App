@@ -246,16 +246,16 @@ if "canvas_key" not in st.session_state:
 # HALAMAN KONTEN
 # =========================
 if page == "Dashboard":
-    st.switch_page(".../dashboard.py")
+    st.switch_page("dashboard.py")
 
 elif page == "Data":
-    st.switch_page("Pages/data.py")
+    st.switch_page("pages/data.py")
 
 elif page == "Technology":
-    st.switch_page("Pages/teknologi.py")
+    st.switch_page("pages/teknologi.py")
 
 elif page == "Predict":
-    st.switch_page("Pages/prediksi.py")
+    st.switch_page("pages/prediksi.py")
 
 elif page == "Canvas":
     left_col, right_col = st.columns([1.15, 1], gap="large")
