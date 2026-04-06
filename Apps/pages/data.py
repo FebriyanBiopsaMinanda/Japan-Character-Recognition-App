@@ -151,13 +151,13 @@ elif page == "Data":
     show_character_samples("Katakana (カタカナ) ", katakana_map, KATAKANA_DIR, "katakana")
 
 elif page == "Technology":
-    st.switch_page('Pages/teknologi.py')
+    st.switch_page('pages/teknologi.py')
 
 elif page == "Predict":
-    st.switch_page('Pages/prediksi.py')
+    st.switch_page('pages/prediksi.py')
 
 elif page == "Drawing":
-    st.switch_page('Pages/drawing.py')
+    st.switch_page('pages/drawing.py')
 
 # =========================
 # CSS CUSTOM
