@@ -43,10 +43,10 @@ st.markdown("<div class='nav-divider'></div></div>", unsafe_allow_html=True)
 # HALAMAN KONTEN
 # =========================
 if page == "Dashboard":
-    st.switch_page(".../dashboard.py")
+    st.switch_page("dashboard.py")
 
 elif page == "Data":
-    st.switch_page('Pages/data.py')
+    st.switch_page('pages/data.py')
 
 elif page == "Technology":
 
@@ -144,10 +144,10 @@ elif page == "Technology":
     st.markdown("</div>", unsafe_allow_html=True)
     
 elif page == "Predict":
-    st.switch_page('Pages/prediksi.py')
+    st.switch_page('pages/prediksi.py')
 
 elif page == "Canvas":
-    st.switch_page('Pages/drawing.py')
+    st.switch_page('pages/drawing.py')
 
 
 # =========================
@@ -185,6 +185,7 @@ st.markdown(
         box-shadow: 0 10px 28px rgba(127, 29, 29, 0.18);
         margin-bottom: 14px;
         width: 100%;
+        margin-top: 60px;
     }
 
     .navbar-title {
