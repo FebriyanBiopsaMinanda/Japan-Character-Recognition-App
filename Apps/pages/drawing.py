@@ -7,6 +7,7 @@ import cv2
 from PIL import Image
 import tensorflow as tf
 import random
+from pathlib import Path
 
 # =========================
 # KONFIGURASI HALAMAN
@@ -21,8 +22,9 @@ st.set_page_config(
 # =========================
 # KONFIGURASI FILE MODEL
 # =========================
-MODEL_PATH = "../japanese_char.h5"
-CLASS_NAMES_PATH = "../class_names.npy"
+PATH_BASE = Path(__file__).resolve().parent.parent.parent
+MODEL_PATH = PATH_BASE / "japanese_char.h5"
+CLASS_NAMES_PATH = PATH_BASE / "class_names.npy"
 IMG_SIZE = 64
 
 # =========================
@@ -154,8 +156,10 @@ def is_canvas_blank(canvas_rgba):
 # =========================
 # AMBIL SAMPEL
 # =========================
-HIRAGANA_DIR = "../Dataset/Hiragana Images"
-KATAKANA_DIR = "../Dataset/Katakana Images"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+DATASET_DIR = os.path.join(BASE_DIR, "Dataset")
+HIRAGANA_DIR = os.path.join(DATASET_DIR, "Hiragana Images")
+KATAKANA_DIR = os.path.join(DATASET_DIR, "Katakana Images")
 
 def get_sample_images(script_type, romaji, max_samples=5):
     if script_type.lower() == "hiragana":
