@@ -158,7 +158,7 @@ elif page == "Technology":
 elif page == "Predict":
     st.switch_page('pages/prediksi.py')
 
-elif page == "Drawing":
+elif page == "Canvas":
     st.switch_page('pages/drawing.py')
 
 # =========================
