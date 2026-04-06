@@ -194,6 +194,7 @@ st.markdown(
         box-shadow: 0 10px 28px rgba(127, 29, 29, 0.18);
         margin-bottom: 14px;
         width: 100%;
+        margin-top: 60px;
     }
 
     .navbar-title {
