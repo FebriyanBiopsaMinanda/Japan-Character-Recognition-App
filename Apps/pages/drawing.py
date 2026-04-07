@@ -208,7 +208,7 @@ def show_prediction_popup(canvas_rgba, script_type, romaji, char_jp, confidence)
         sample_images = get_sample_images(script_type, romaji)
 
         if sample_images:
-            st.markdown("<h2 style='color:#991b1b;'>Contoh Sample (サンプル例)</h2>", unsafe_allow_html=True)
+            st.markdown("<h2 style='color:#991b1b;'>Sample Example (サンプル例)</h2>", unsafe_allow_html=True)
 
             cols = st.columns(5)
 
